@@ -6,7 +6,7 @@ var myApp = angular
                 .module('myModule', [])
                 .controller('myController' , function ($scope) {
                     var country = {
-                        flag: '/src/images/laravel.jpg'
+                        name: 'Bangladesh'
                     };
 
                     $scope.country = country;
