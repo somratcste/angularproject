@@ -5,5 +5,9 @@
 var myApp = angular
                 .module('myModule', [])
                 .controller('myController' , function ($scope) {
-                    $scope.message = 'Angular JS Tutorial' ;
+                    var country = {
+                        flag: '/src/images/laravel.jpg'
+                    };
+
+                    $scope.country = country;
                 });
