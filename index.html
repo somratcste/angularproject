@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
 </head>
-<body>
+<body ng-app="myApp">
 <div id="wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -17,45 +17,32 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div  class="navbar-brand">
-                    <a id="menu-toggle" href="#" class="btn-menu toggle"><span class="glyphicon glyphicon-list"></span>
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <a href="#">Project name</a>
+                    <span id="menu-toggle" href="#" class="glyphicon glyphicon-list toggle">
+                    </span>
+                    <a href="#">Dashboard</a>
                 </div>
             </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
         </div>
     </nav>
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <nav id="spy">
             <ul class="sidebar-nav nav">
-                <li class="sidebar-brand">
-                    <a href="#home"><span class="fa fa-home solo">Home</span></a>
-                </li>
                 <li>
-                    <a href="#anch1">
-                        <span class="fa fa-anchor solo">Anchor 1</span>
+                    <a>
+                        <form>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </form>
                     </a>
                 </li>
                 <li>
-                    <a href="#anch2">
-                        <span class="fa fa-anchor solo">Anchor 2</span>
+                    <a href="#/student">
+                        <span class="fa fa-anchor solo">Student List</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#anch3">
-                        <span class="fa fa-anchor solo">Anchor 3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#anch4">
-                        <span class="fa fa-anchor solo">Anchor 4</span>
+                    <a href="/student/create">
+                        <span class="fa fa-anchor solo">Add New</span>
                     </a>
                 </li>
             </ul>
@@ -69,10 +56,10 @@
                     <div class="col-md-12">
                         <div class="panel panel-success">
                             <div class="panel-heading">
-                                Panel 1
+                                Show Students Information
                             </div>
                             <div class="panel-body">
-                                content body
+                                <div ng-view></div>
                             </div>
                         </div>
                     </div>
@@ -82,14 +69,14 @@
     </div>
 </div>
 
-
-
-<script src="src/js/angular.min.js"></script>
+<script type="text/javascript" src="src/js/main.js"></script>
 <script src="src/js/jquery.min.js"></script>
 <script src="src/js/bootstrap.min.js"></script>
-<script src="controllers/controller.js"></script>
+<script src="src/js/angular.min.js"></script>
+<script src="src/js/angular-route.js"></script>
 <script src="controllers/app.js"></script>
-<script type="text/javascript" src="src/js/main.js"></script>
+<script src="controllers/controller.js"></script>
+
 </body>
 </html>
 

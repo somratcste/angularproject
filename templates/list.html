@@ -1,0 +1,19 @@
+<h3>Student List </h3>
+<table class="table table-bordered" ng-init="getStudents()">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="student in students">
+        <td>{{ student.name }}</td>
+        <td>
+            <a href="" class="btn btn-success">Show</a>
+            <a href="" class="btn btn-info">Edit</a>
+            <a href="" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
