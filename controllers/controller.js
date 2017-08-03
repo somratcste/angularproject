@@ -3,6 +3,6 @@
  */
 myApp.controller('studentController', function($scope) {
     $scope.getStudents = function () {
-        $scope.students = [ {name:'sormat','name':'akash'}];
+        $scope.students = [ {name:'sormat'},{'name':'akash'},{'name':'batash'}];
     }
 });
