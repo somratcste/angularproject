@@ -1,17 +1,31 @@
-<h4>Student List </h4>
+<h3>Student List </h3>
+
+<div class="pull-right" style="padding-bottom: 20px">
+    <form>
+        <input type="text" class="form-control">
+    </form>
+</div>
 <table class="table table-bordered" ng-init="getStudents()">
     <thead>
     <tr>
         <th>Name</th>
-        <th>Actions</th>
+        <th>Department</th>
+        <th>Session</th>
+        <th>Degree</th>
+        <th>Pass. Year</th>
+        <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="student in students">
         <td>{{ student.name }}</td>
+        <td>{{ student.department }}</td>
+        <td>{{ student.session }}</td>
+        <td>{{ student.degree }}</td>
+        <td>{{ student.p_year }}</td>
         <td>
             <a href="" class="btn btn-success">Show</a>
-            <a href="" class="btn btn-info">Edit</a>
+            <a ng-href="#!/student/{{ student.id }}/edit" class="btn btn-info">Edit</a>
             <a href="" class="btn btn-danger">Delete</a>
         </td>
     </tr>

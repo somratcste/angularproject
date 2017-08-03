@@ -5,7 +5,16 @@ myApp.config(function($routeProvider) {
             templateUrl : "templates/list.html",
             controller : "studentController"
         })
+        .when("/student", {
+            templateUrl : "templates/list.html",
+            controller : "studentController"
+        })
         .when("/student/create", {
-            templateUrl : "blue.htm"
+            templateUrl : "templates/create.html",
+            controller : "studentController"
+        })
+        .when("/student/:id/edit", {
+        templateUrl : "templates/edit.html",
+        controller : "studentController"
         });
 });
