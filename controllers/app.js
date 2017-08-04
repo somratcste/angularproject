@@ -14,7 +14,7 @@ myApp.config(function($routeProvider) {
             controller : "studentController"
         })
         .when("/student/:id/edit", {
-        templateUrl : "templates/edit.html",
-        controller : "studentController"
+            templateUrl : "templates/edit.html",
+            controller : "studentController"
         });
 });
