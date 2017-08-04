@@ -1,14 +1,13 @@
 <div class="row main" ng-init="showStudent()">
     <div class="main-login main-center">
-        <h3><b>Edit Student Information</b></h3>
-        <form ng-submit="updateStudent(student)">
-
+        <h3><b>Show Student Information</b></h3>
+        <form>
             <div class="form-group">
                 <label class="cols-sm-2 control-label">Name</label>
                 <div class="cols-sm-10">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" name="name" ng-model="student.name"/>
+                        <input type="text" class="form-control" name="name" ng-model="student.name" readonly/>
                     </div>
                 </div>
             </div>
@@ -18,7 +17,7 @@
                 <div class="cols-sm-10">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" name="department" ng-model="student.department"/>
+                        <input type="text" class="form-control" name="department" ng-model="student.department" readonly/>
                     </div>
                 </div>
             </div>
@@ -28,7 +27,7 @@
                 <div class="cols-sm-10">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" name="session" ng-model="student.session"/>
+                        <input type="text" class="form-control" name="session" ng-model="student.session" readonly/>
                     </div>
                 </div>
             </div>
@@ -38,7 +37,7 @@
                 <div class="cols-sm-10">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" name="degree" ng-model="student.degree"/>
+                        <input type="text" class="form-control" name="degree" ng-model="student.degree" readonly/>
                     </div>
                 </div>
             </div>
@@ -48,17 +47,13 @@
                 <div class="cols-sm-10">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" name="p_year" ng-model="student.p_year"/>
+                        <input type="text" class="form-control" name="p_year" ng-model="student.p_year" readonly/>
                     </div>
                 </div>
             </div>
 
             <div class="form-group ">
-                <button type="submit" class="btn btn-success btn-lg btn-block login-button">Update</button>
-            </div>
-
-            <div class="form-group ">
-                <a href="#" type="button" class="btn btn-danger btn-lg btn-block login-button">Cancel</a>
+                <a href="#" type="button" class="btn btn-danger btn-lg btn-block login-button">Back</a>
             </div>
 
         </form>
