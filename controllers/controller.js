@@ -1,7 +1,7 @@
 /**
  * Created by somrat on 8/3/17.
  */
-myApp.controller('studentController', function($scope, $http, $routeParams) {
+myApp.controller('studentController', function($route, $scope, $http, $routeParams) {
     $scope.getStudents = function () {
         $http.get("../api/select.php")
         .then(function(response) {
@@ -29,6 +29,14 @@ myApp.controller('studentController', function($scope, $http, $routeParams) {
         $http.post("../api/update.php",info)
             .then(function(response) {
                 window.location.href = 'http://angularproject.cste/#!/';
+            });
+    };
+
+    $scope.deleteStudent = function (id) {
+        var id = id;
+        $http.post("../api/delete.php?id="+id)
+            .then(function(response) {
+               $route.reload();
             });
     };
 
