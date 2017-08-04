@@ -25,4 +25,11 @@ myApp.controller('studentController', function($scope, $http, $routeParams) {
             });
     };
 
+    $scope.updateStudent = function (info) {
+        $http.post("../api/update.php",info)
+            .then(function(response) {
+                window.location.href = 'http://angularproject.cste/#!/';
+            });
+    };
+
 });
